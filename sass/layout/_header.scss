@@ -18,6 +18,7 @@
 
 #menu:checked ~ .search-bar .menu-toggle__label {
     background-color: yellow;
+    
 }
 
 /***************************************************
@@ -25,7 +26,7 @@
 ***************************************************/        
 
 .nav-bar{
-    background-color: mediumturquoise;
+    background-color: #5E24C3;
 }
 
 .nav-bar__nav-list{
@@ -41,10 +42,15 @@
 
 .nav-bar__nav-link{
     display: block;
-    background-color: purple;
+    background-color: #5E24C3;
     color: #fff;
-    padding: 1em 2em;
+    padding: 0.5em 2em;
     text-decoration: none;
+}
+
+.nav-bar__nav-link:hover{
+    background-color: #6A8BFF;
+    color: black;
 }
 
 
@@ -53,22 +59,34 @@
 ***************************************************/        
 
 .search-bar{
-    background-color: olivedrab;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
 }
 
-.search-bar__logo-container,
 .search-bar__form-container{
-    padding: 1em;
+    padding: 0.8em;
 }
 
 .search-bar__logo-container{
-    background-color: yellow;
+    background-image: url(/img/logo/logo_white_large.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 90%;
+    width: 15em;
+    background-color: #6A8BFF;
 }
 
+.search-bar__logo-container:hover{
+    background-image: url(/img/logo/logo_small.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 90%;
+    width: 15em;
+    background-color: white;
+}
 .search-bar__form-container{
-    background-color: gold;
+    background-color: #6A8BFF;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
@@ -76,20 +94,38 @@
 
 .search-bar__form-label{
     background-color: greenyellow;
+    display: none;
 }
 
 .search-bar__form-search{
-    background-color: deeppink;
-    width: 70%;
+    background-color: whitesmoke;
+    width: 90%;
+    height: 2em;
 }
 
 .search-bar__form-submit{
     background-color: darkslategray;
+    width: 5em;
+    background-color: #5E24C3;
+    color: white;
+    font-weight: bold;
+}
+
+.search-bar__form-submit:hover{
+    color:#5E24C3;
+    background-color: white;
 }
 
 .search-bar__carrito-container{
     flex: 0 0 3em;
-    background-color: goldenrod;
+    background-color: white;
+    color: transparent;
+    background-image: url(/img/logo/logo_small_icon_only_inverted.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #6A8BFF;
+
 }
 
 
