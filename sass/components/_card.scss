@@ -15,8 +15,7 @@
     color: #fcfdfe;
     background-color: transparent;
     border-radius: 5px;
-    
-    
+    box-shadow: 2em 2em 3em rgba(0,0,0,.2);
     
     &__article{
         position: relative;
@@ -27,7 +26,6 @@
         -moz-transition: all .4s ease;
         -webkit-transition: all .4s ease;
         transform-style: preserve-3d;
-        box-shadow: 1em 1em 2em rgba(0,0,0,.2);
         transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
         
     }
