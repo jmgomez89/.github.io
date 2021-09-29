@@ -1,0 +1,44 @@
+.main-footer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-div{
+    margin-top: 1em;
+    height: 8em;
+    background-color: #0096c7;
+
+    &__foot-list{
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+    }
+
+    &__foot-link{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 4em;
+        height: 3em;
+        width: 8em;
+        margin-top: 1em;
+        display: block;
+        padding: 2em 2em;
+        cursor: pointer;
+        border-radius: 100px;
+    }
+
+    &__foot-link:hover{
+        background-color: #caf0f8;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    &__copyright{
+        text-align: center;
+        padding-top: 0.5em;
+    }
+
+
+}
