@@ -5,7 +5,13 @@
 
 .main-header{
     display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
     flex-direction: column;
+    background-color: #0096c7;
+    background-image: linear-gradient(160deg, #0096c7 0%, #caf0f8 100%);
 }
 
 #menu {
@@ -17,7 +23,7 @@
     }
 
     &:checked ~ .search-bar .menu-toggle__label {
-        background-color: white;
+        background-color: transparent;
         
     }
 }
@@ -26,7 +32,7 @@
 ***************************************************/        
 
 .nav-bar{
-    background-color: #caf0f8;
+    background-color: transparent;
     
     &__nav-list{
         display: flex;
@@ -41,20 +47,27 @@
 
     &__nav-link{
         display: block;
-        background-color: #caf0f8;
+        background-color: transparent;
         color: black;
         padding: 0.5em 2em;
         text-decoration: none;
-        font-size: 1.5em;
+        font-size: 1.2em;
         text-transform: uppercase;
         cursor: pointer;
     }
 
     &__nav-link:hover{
         color: whitesmoke;
-        font-weight: bold;
-        background-color: #0096c7;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        text-shadow:
+        0 0 5px rgba(0,178,255,1),
+        0 0 10px rgba(0,178,255,1),
+        0 0 20px rgba(0,178,255,1),
+        0 0 40px rgba(38,104,127,1),
+        0 0 80px rgba(38,104,127,1),
+        0 0 90px rgba(38,104,127,1),
+        0 0 100px rgba(38,104,127,1),
+        0 0 140px rgba(38,104,127,1),
+        0 0 180px rgba(38,104,127,1);
     }
 
 }
@@ -70,7 +83,7 @@
 
     &__form-container{
         padding: 0.8em;
-        background-color: #48cae4;
+        background-color: transparent;
         flex-basis: 100%;
         display: flex;
         justify-content: center;
@@ -80,12 +93,8 @@
         background-repeat: no-repeat;
         background-position: left;
         background-size: 90%;
-        width: 15em;
-        background-color: #48cae4;
-
-        &:hover{
-            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-        }
+        width: 20em;
+        background-color: transparent;
     }
 
     &__form-label{
@@ -107,22 +116,16 @@
         transition: all .5s;
         display: block;
         
-    
-        &::-webkit-search-decoration,
-        &::-webkit-search-cancel-button {
-            display: none; 
-        }
-        
         &:focus {
-            width: 40em;
+            width: 20em;
             background: #fff;
-            box-shadow: 0 0 5px rgba(109,207,246,.5);
         }
     }
 
     &__form-submit{
         background-color: whitesmoke;
-        color: #03045e;
+        color: black;
+        font-weight: 600;
         border-radius: 8em;
         width: 6em;
         height: 2em;
@@ -132,10 +135,17 @@
         text-transform: uppercase;
 
         &:hover{
-            color: whitesmoke;
-            font-weight: bold;
-            background-color: #0096c7;
-            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            color: white;
+            text-shadow:
+                0 0 5px rgba(0,178,255,1),
+                0 0 10px rgba(0,178,255,1),
+                0 0 20px rgba(0,178,255,1),
+                0 0 40px rgba(38,104,127,1),
+                0 0 80px rgba(38,104,127,1),
+                0 0 90px rgba(38,104,127,1),
+                0 0 100px rgba(38,104,127,1),
+                0 0 140px rgba(38,104,127,1),
+                0 0 180px rgba(38,104,127,1);
         }
     }
 
@@ -145,8 +155,8 @@
         background-size: 90%;
         background-repeat: no-repeat;
         background-position: center;
-        background-color: #48cae4;
-
+        background-color: transparent;
+        cursor: pointer;        
     }
 
 }
@@ -162,7 +172,7 @@
 
     &__label{
         display: block;
-        background-color: #48cae4;
+        background-color: transparent;
         width: 100%;
         height: 100%;
     }
@@ -211,6 +221,13 @@
             flex-direction: column;
         }
 
+    }
+
+    .search-bar__form-search {
+        width: 4em;
+        &:focus {
+            width: 5em;
+        }
     }
 }
 
