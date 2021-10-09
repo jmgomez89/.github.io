@@ -1,43 +1,162 @@
-.main-footer{
+
+.main-footer {
     display: flex;
+    width: 100%;
+    height: 25em;
+    margin-top: 2em;
     flex-direction: column;
-    background-color: whitesmoke;
-}
-
-.footer-div{
-    margin-top: 1em;
-    height: 8em;
+    justify-content: center;
     background-color: #0096c7;
-    background-image: linear-gradient(160deg, #0096c7 0%, #caf0f8 100%);;
+    background-image: linear-gradient(160deg, #0096c7 0%, #caf0f8 100%);
+    
 
-    &__foot-list{
+    &__features-container{
+        background-color: transparent;
+        width: 100%;
+        height: 15em;
         display: flex;
-        list-style-type: none;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
+        gap: 2em;
+        
     }
 
-    &__foot-link{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 2em;
+
+    &__info-container{
+        background-color: #666666;
+        width: 100%;
+        height: 5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2em;
+            
+    }
+    
+    &__info {
+        color: black;
+        width: 30em;
+    }
+    
+    &__separador {
+        background-color: transparent;
+        width: 0.4em;
         height: 3em;
-        width: 8em;
-        margin-top: 1em;
-        display: block;
-        padding: 2em 2em;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+    
+    &__social-media {
+        background-color: transparent;
+        width: 30em;
+        height: 4em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    
+        
+    }
+    
+    &__social-media-link {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: transparent;
         cursor: pointer;
-        border-radius: 100px;
     }
-
-    &__foot-link:hover{
-        background-color: #caf0f8;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    }
-
-    &__copyright{
-        text-align: center;
-        padding-top: 0.5em;
-    }
-
+    
 
 }
+
+.main-footer-card {
+	width: 18em;
+	height: 12em;
+	margin: 0.1em;
+	perspective: 1000px;
+
+    &__content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+        
+    }
+    
+    &__input {
+        display: none;
+    }
+
+    &:hover  &__content {
+        transform: rotateY(180deg);
+    }
+    
+    &__image,
+    &__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        border-radius: 6px;
+    }
+
+    &__image {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: #0096c7;
+    }
+
+    &__front {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1.5em;
+        transform: translateZ(80px) scale(0.94);
+    }
+    
+    &__back {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        transform: rotateY(180deg);
+        background-color: #0096c7;
+        background-image: linear-gradient(160deg, #0096c7 0%, #caf0f8 100%);
+        
+        &-inner{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5em;
+            transform: translateZ(80px) scale(0.94);
+        }
+
+        &-description {
+            font-size: 2em;
+            font-weight: 900;
+            line-height: 1.4em;
+            overflow: hidden;
+            color: #FEFEDF;
+            text-align: center;
+        }     
+        
+    }	
+}     
+
+
+
+
+// @media (max-width: 768px) {
