@@ -11,48 +11,38 @@
 
 <body>
 
-    <header class="main-header">
+    <header class="header">
 
-        <input type="checkbox" id="menu">
+        <div class="header__logo-container">
+            <a href="/index.html" class="header__logo" style="background-image: url(/img/logo/logo_white_large.png);"></a>
+        </div>
 
+        <button id="menu">Menu</button>
         <nav class="nav-bar">
-
-            <ul class="nav-bar__nav-list">
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="#">Inicio</a>
+            <ul class="nav-bar__ul">
+                <li class="nav-bar__li">
+                    <a href="#" class="nav-bar__link">Inicio</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                <li class="nav-bar__li">
+                    <a href="alta.html" class="nav-bar__link">Alta</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+                <li class="nav-bar__li">
+                    <a href="contacto.html" class="nav-bar__link">Contacto</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+                <li class="nav-bar__li">
+                    <a href="nosotros.html" class="nav-bar__link">Nosotros</a>
                 </li>
             </ul>
-
         </nav>
 
         <div class="search-bar">
 
-            <div class="search-bar__logo-container" style="background-image: url(/img/logo/logo_white_large.png);">
-            </div>
-
             <form class="search-bar__form-container">
                 <input class="search-bar__form-search" type="search" id="busqueda">
-                <input class="search-bar__form-submit" type="submit" value="Buscar">
+                <button class="search-bar__form-submit" type="submit" name="Buscar">Buscar</button>
             </form>
 
             <div class="search-bar__carrito-container" style="background-image: url(/img/logo/logo_small_icon_only.png);">
-            </div>
-
-            <div class="menu-toggle">
-                <label class="menu-toggle__label" for="menu">
-                    <span class="menu-toggle__pan-arriba"></span>   
-                    <span class="menu-toggle__medallon"></span>   
-                    <span class="menu-toggle__pan-abajo"></span>
-                </label>
             </div>
 
         </div>

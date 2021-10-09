@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="/img/logo/logo_small_icon_only.png">
+    <title>Connecticus</title>
+
+    <style>
+
+.header-prueba {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#menu-prueba {
+    display: none;
+
+}
+#menu-prueba:checked + .nav-bar-prueba {
+    display: block;
+}
+
+#menu-prueba:checked ~ .search-bar-prueba .menu-toggle__label-prueba {
+    background-color: transparent;
+    
+}
+.header-prueba__logo {
+    width: 20em;
+    height: 10em;
+    background-color: red;
+}
+
+.header__logo-prueba {
+    display: inline-block;
+    width: 90%;
+    height: 10em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-bar-prueba {
+    background-color: transparent;
+    margin-bottom: 0.2em;
+}
+
+.nav-bar__nav-list-prueba{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2em;
+}
+
+
+.nav-bar__nav-link-prueba{
+    display: block;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.search-bar-prueba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+.search-bar__form-submit-prueba {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-bar__carrito-container {
+    width: 3em;
+    height: 3em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button#menu {
+    display: none;
+    width: 4em;
+    font-size: 1.5em;
+    color: #FA453B;
+    background: transparent;
+}
+
+button#menu:focus + nav#superior {
+    display: block;
+}
+
+nav#superior ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#superior ul a {
+    display: block;
+    width: 4em;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: .3em 0;
+    text-align: center;
+    color: #FA453B;
+    background: transparent;
+    transition: 1s all;
+}
+
+nav#superior ul a:hover {
+    background: #ec7b5f;
+}
+
+@media all and (max-width: 700px) {
+    button#menu {
+        display: block;
+    }
+	nav#superior {
+        display: none;
+    }
+	nav#superior ul {
+        flex-direction: column;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <header class="header-prueba">
+
+        
+
+        <div class="header-prueba__logo">
+            <a href="/index.html" class="header__logo-prueba" style="background-image: url(/img/logo/logo_white_large.png);"></a>
+        </div>
+
+        <button id="menu">menu</button>
+        <nav id="superior">
+            <ul>
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="alta.html">Alta</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="search-bar-prueba">
+
+            <form class="search-bar__form-container">
+                <input class="search-bar__form-search-prueba" type="search" id="busqueda">
+                <button class="search-bar__form-submit-prueba" type="submit" style="background-image: url(/img/busqueda/lupa.png);"></button>
+            </form>
+
+            <div class="search-bar__carrito-container" style="background-image: url(/img/logo/logo_small_icon_only.png);">
+            </div>
+
+            <div class="menu-toggle-prueba">
+                <label class="menu-toggle__label-prueba" for="menu">
+                    <span class="menu-toggle__pan-arriba-prueba"></span>   
+                    <span class="menu-toggle__medallon-prueba"></span>   
+                    <span class="menu-toggle__pan-abajo-prueba"></span>
+                </label>
+            </div>
+
+        </div>
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
