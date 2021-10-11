@@ -241,6 +241,9 @@
     .main-footer__info-container {
         flex-wrap: wrap-reverse;
         height: 6em;
+        border-top: 2px solid black;
+        margin-top: 1em;
+        padding: 1em;
     }
 
     .main-footer__separador {
@@ -249,6 +252,7 @@
 
     .main-footer__info {
         width: 10em;
+        margin-top: 0.2em;
     }
 }
 
