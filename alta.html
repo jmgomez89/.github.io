@@ -5,68 +5,271 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="/img/logo/logo_small_icon_only.png">
     <title>Alta</title>
 </head>
+
 <body>
-    <header class="main-header">
 
-        <input type="checkbox" id="menu">
+    <header class="header">
 
+        <div class="header__logo-container">
+            <a href="/index.html" class="header__logo" style="background-image: url(/img/logo/logo_white_large.png);"></a>
+        </div>
+
+        <button id="menu">Menu</button>
         <nav class="nav-bar">
-            <ul class="nav-bar__nav-list">
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+            <ul class="nav-bar__ul">
+                <li class="nav-bar__li">
+                    <a href="#" class="nav-bar__link">Inicio</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                <li class="nav-bar__li">
+                    <a href="alta.html" class="nav-bar__link">Alta</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+                <li class="nav-bar__li">
+                    <a href="contacto.html" class="nav-bar__link">Contacto</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+                <li class="nav-bar__li">
+                    <a href="nosotros.html" class="nav-bar__link">Nosotros</a>
                 </li>
             </ul>
         </nav>
+
         <div class="search-bar">
-            <div class="search-bar__logo-container" style="background-image: url(/img/logo/logo_white_large.png);">
-            </div>
+
             <form class="search-bar__form-container">
                 <input class="search-bar__form-search" type="search" id="busqueda">
-                <input class="search-bar__form-submit" type="submit" value="Buscar">
+                <button class="search-bar__form-submit" type="submit" name="Buscar">Buscar</button>
             </form>
+
             <div class="search-bar__carrito-container" style="background-image: url(/img/logo/logo_small_icon_only.png);">
             </div>
-            <div class="menu-toggle">
-                <label class="menu-toggle__label" for="menu">
-                    <span class="menu-toggle__pan-arriba"></span>   
-                    <span class="menu-toggle__medallon"></span>   
-                    <span class="menu-toggle__pan-abajo"></span>
-                </label>
-            </div>
+
         </div>
+
     </header>
-   
-    <main>
-        
 
+    <main class="main-alta">
+        <form action="formulario" method="post" autocomplete="off" class="form-alta">
 
+            <fieldset class="form-alta__fieldset">
 
+                <legend class="form-alta__legend">
+                    Formulario de Alta 📋✔
+                </legend>
 
+                <div class="form-alta__datos">
 
+                    <div class="form-alta__datos-container">
+                        <label for="nombre">
+                            Nombre de Producto:
+                        </label>
+                        <input class="form-alta__input" type="text" id="nombre" name="nombre" required autofocus>
+                    </div>
 
+                    <div class="form-alta__datos-container">
+                        <label for="precio">
+                            Precio:
+                        </label>
+                        <input class="form-alta__input" type="number" id="precio" name="precio" min="0.00" max="1000000.00" step="0.01" required>
+                    </div>
 
+                    <div class="form-alta__datos-container">
+                        <label for="stock">
+                            Stock:
+                        </label>
+                        <input class="form-alta__input" type="number" id="stock" name="documento"  min="1" max="1000000" required>
+                    </div>
 
+                    <div class="form-alta__datos-container">
+                        <label for="marca">
+                            Marca:
+                        </label>
+                        <input class="form-alta__input" type="text" id="marca" name="marca" required>
+                    </div>
 
+                    <div class="form-alta__datos-container">
+                        <label for="categoria">
+                            Categoría:
+                        </label>
+                        <select class="form-alta__input" name="categoria" id="categoria" required>
+                            <option value="">
+                                - Seleccionar - 
+                            </option>
+                            <option value="celulares">
+                                Celulares y Teléfonos
+                            </option>
+                            <option value="computacion">
+                                Computación
+                            </option>
+                            <option value="electrodomesticos">
+                                Electrodomésticos
+                            </option>
+                            <option value="televisores">
+                                Televisores
+                            </option>
+                            <option value="camaras">
+                                Cámaras y Accesorios
+                            </option>
+                            <option value="consolas">
+                                Consolas y Videojuegos
+                            </option>
+                            <option value="electronica">
+                                Electrónica
+                            </option>
+                            <option value="otra">
+                                Otra
+                            </option>
+                        </select>
 
+                        
+                        <div class="form-alta__datos-container">
+                            <label for="detalles">
+                                Detalles del Producto
+                            </label>
+                            <textarea name="contanos" id="contanos" required >
+                            </textarea>
+                        </div>
+                        
+                        <div class="form-alta__datos-foto">
+                            <button class="form-alta__foto" for="foto">
+                                Foto del Producto
+                            </button>
+                            <input class="form-alta__input-foto" type="file" id="foto" name="foto" accept="image/*" required>
+                        </div>
 
+                        <div class="form-alta__checkbox">
+                            <input type="checkbox" id="envio" name="envio" required>
+                            <label for="femenino">
+                                Envío sin cargo
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-alta__buttons">
+                    <input class="form-alta__button1" type="submit" value="Cargar Producto">
+                    <input class="form-alta__button2" type="reset" value="Restablecer">
+                </div>
+
+            </fieldset>
+
+        </form>
 
     </main>
 
+    <footer class="main-footer">
 
+        <section class="main-footer__features-container">
 
+            <div class="main-footer-card">
+                <div class="main-footer-card__content">
+                    <div class="main-footer-card__image" style="background-image: url(/img/iconos-footer/Card\ Payment_Isometric.png)">
+                    </div>
+                    <div class="main-footer-card__back">
+                        <div class="main-footer-card__back-inner">
+                            <div class="main-footer-card__back-description">
+                                <p>
+                                    ¡Todos los medios de pago! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="main-footer-card">
+                <div class="main-footer-card__content">
+                    <div class="main-footer-card__image" style="background-image: url(/img/iconos-footer/Wallet_Isometric.png)">
+                    </div>
+                    <div class="main-footer-card__back">
+                        <div class="main-footer-card__back-inner">
+                            <div class="main-footer-card__back-description">
+                                <p>
+                                    ¡Promociones todos los días!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="main-footer-card">
+                <div class="main-footer-card__content">
+                    <div class="main-footer-card__image" style="background-image: url(/img/iconos-footer/Instagram\ post\ _Outline.png)">
+                    </div>
+                    <div class="main-footer-card__back">
+                        <div class="main-footer-card__back-inner">
+                            <div class="main-footer-card__back-description">
+                                <p>
+                                    ¡Seguinos en las redes y buscá nuestros sorteos!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-card">
+                <div class="main-footer-card__content">
+                    <div class="main-footer-card__image" style="background-image: url(/img/iconos-footer/Washing\ hands_Isometric.png)">
+                    </div>
+                    <div class="main-footer-card__back">
+                        <div class="main-footer-card__back-inner">
+                            <div class="main-footer-card__back-description">
+                                <p>
+                                    ¡Lavá tus manos antes
+                                    y después de recibir 
+                                    tu pedido!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+       
+        <section class="main-footer__info-container">
+
+            <div class="main-footer__info">
+                <p>
+                    2021 || Juan Manuel Gómez || Educación IT Bootcamp
+                </p>
+            </div>  
+
+            <div class="main-footer__separador">
+            </div>
+
+            <div class="main-footer__social-media">
+                
+                <a href="https://www.google.com.ar/maps/place/Av.+La+Plata+1772,+C1250AAU+CABA/@-34.6358237,-58.4251352,19z/data=!3m1!4b1!4m5!3m4!1s0x95bccbae96634181:0x6cfc4c1e4e261012!8m2!3d-34.6358248!4d-58.424588" target="_blank" class="main-footer__social-media-link" style="background-image: url(/img/iconos-footer/location.png);">
+                </a>
+
+                <a href="mailto:jmgomezn8@gmail.com" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/mail.png);">
+                </a>
+
+                <a href="https://wa.me/5491125681234" target="_blank" class="main-footer__social-media-link" style="background-image: url(/img/iconos-footer/whatsapp.png);">
+                </a>
+
+                <a href="https://www.facebook.com/juanmanuel.gomez.52056" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/facebook.png);">
+                </a>
+
+                <a href="https://www.instagram.com/juannmg22/" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/instagram.png);">
+                </a>
+
+                <a href="https://twitter.com/juannnmg22" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/twitter.png);">
+                </a>
+
+                <a href="https://www.linkedin.com/in/juan-manuel-g%C3%B3mez-a682b8137/" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/linkedin.png);">
+                </a>
+
+            </div>
+            
+        </section>
+
+    </footer>
 
 </body>
 </html>

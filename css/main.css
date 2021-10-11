@@ -181,7 +181,7 @@ body {
 }
 
 .header {
-  background-color: #B5B5B5;
+  background-color: #0096C7;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,7 +194,7 @@ body {
 .header__logo-container {
   width: 15em;
   height: 5em;
-  background-color: #0096C7;
+  background-color: transparent;
 }
 
 .header__logo {
@@ -236,13 +236,19 @@ body {
 #menu {
   display: none;
   width: 4em;
-  font-size: 1.5em;
-  color: #0096C7;
+  font-size: 1em;
+  color: whitesmoke;
   background: transparent;
+  font-weight: 600;
 }
 
 #menu:focus + .nav-bar {
   display: block;
+}
+
+#menu:hover {
+  background: whitesmoke;
+  color: #0096C7;
 }
 
 .nav-bar__ul {
@@ -259,13 +265,14 @@ body {
   text-decoration: none;
   padding: 0.3em 0;
   text-align: center;
-  color: #005C7A;
+  color: whitesmoke;
   background: transparent;
   transition: 1s all;
 }
 
 .nav-bar__link:hover {
-  background: #0096C7;
+  background: whitesmoke;
+  color: #0096C7;
 }
 
 @media (max-width: 980px) {
@@ -537,4 +544,126 @@ body {
   .main-footer__info {
     width: 15em;
   }
+}
+.main-alta {
+  margin-top: 6em;
+  margin-bottom: 5em;
+  font-size: 1.5em;
+}
+
+.form-alta {
+  width: 50%;
+  margin: auto;
+}
+.form-alta__fieldset {
+  background-color: transparent;
+  border: none;
+  font-variant: small-caps;
+}
+.form-alta__legend {
+  background-color: #DEEDF0;
+  border: 2px solid #0096C7;
+  border-radius: 3px;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+.form-alta__datos {
+  border: 2px #0096C7 solid;
+  background-color: #DEEDF0;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+.form-alta__datos:focus-within {
+  background-color: #A2CDCD;
+}
+.form-alta__fieldset:focus-within legend {
+  background-color: #A2CDCD;
+}
+.form-alta__datos-container {
+  padding: 0.5em;
+  text-align: center;
+  font-variant: small-caps;
+}
+.form-alta__datos-container label {
+  display: block;
+}
+.form-alta__datos-foto {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.form-alta__foto {
+  background-color: #DEEDF0;
+  border: 1px #0096C7 solid;
+  color: #000;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+  font-family: "Gemunu Libre", sans-serif;
+}
+.form-alta__input-foto {
+  left: 0;
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  font-size: 3em;
+}
+.form-alta__datos-container textarea {
+  margin-top: 0.6em;
+  border: 1px #0096C7 solid;
+  border-radius: 3px;
+  width: 81%;
+  min-height: 10em;
+  resize: vertical;
+  text-align: center;
+  color: #316B83;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+.form-alta__input {
+  text-align: center;
+  color: #316B83;
+  border-radius: 3px;
+  width: 78%;
+  height: 2.5em;
+  border: 1px #0096C7 solid;
+  margin-top: 0.5em;
+  font-size: 0.6em;
+  font-weight: 900;
+}
+.form-alta__checkbox label {
+  display: inline;
+}
+.form-alta__buttons {
+  margin-top: 1em;
+  text-align: center;
+}
+.form-alta__button1 {
+  background-color: #A2CDCD;
+  color: black;
+  border: 1px #0096C7 solid;
+  border-radius: 3px;
+  height: 2.5em;
+  padding: 0.5em;
+  font-size: 0.8em;
+  font-family: "Gemunu Libre", sans-serif;
+}
+.form-alta__button2 {
+  background-color: #A2CDCD;
+  color: black;
+  border: 1px #0096C7 solid;
+  border-radius: 3px;
+  height: 2.5em;
+  padding: 0.5em;
+  font-size: 0.8em;
+  font-family: "Gemunu Libre", sans-serif;
+}
+.form-alta__button1:hover {
+  background-color: #DEEDF0;
+}
+.form-alta__button2:hover {
+  background-color: #DEEDF0;
 }

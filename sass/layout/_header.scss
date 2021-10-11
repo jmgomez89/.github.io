@@ -1,5 +1,5 @@
 .header {
-    background-color: #B5B5B5;
+    background-color: #0096C7;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +12,7 @@
 .header__logo-container {
     width: 15em;
     height: 5em;
-    background-color: #0096C7;
+    background-color: transparent;
 
 }
 
@@ -55,19 +55,23 @@
 }
 
 
-
 #menu {
     display: none;
     width: 4em;
-    font-size: 1.5em;
-    color: #0096C7;
+    font-size: 1em;
+    color: whitesmoke;
     background: transparent;
+    font-weight: 600;
 }
 
 #menu:focus + .nav-bar {
     display: block;
 }
 
+#menu:hover {
+    background: whitesmoke;
+    color:#0096C7;
+}
 .nav-bar__ul {
     display: flex;
     list-style: none;
@@ -82,13 +86,14 @@
     text-decoration: none;
     padding: .3em 0;
     text-align: center;
-    color: #005C7A;
+    color: whitesmoke;
     background: transparent;
     transition: 1s all;
 }
 
 .nav-bar__link:hover {
-    background: #0096C7;
+    background: whitesmoke;
+    color:#0096C7;
 }
 
 @media  (max-width: 980px) {
