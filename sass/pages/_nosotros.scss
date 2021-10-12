@@ -1,6 +1,6 @@
 .main-nosotros{
     font-family: 'Work Sans', sans-serif;
-    
+    width: 100%;
 }   
 
 .section-nosotros {
@@ -172,4 +172,295 @@
 
 }
 
+@media (max-width: 960px) {
 
+    .section-nosotros1 {
+    
+        &__title {   
+            font-size: 3em;
+        }
+    
+        &__description {
+            font-size: 3em;
+        }
+    }
+
+    .section-nosotros2 {
+    
+        &__title {  
+            font-size: 3em;
+        }
+    
+        &__description {
+            font-size: 3em;
+        }
+    }
+
+    .section-nosotros3 {
+    
+        &__image-container {
+            width: 25em;
+            height: 25em;
+        }
+    
+        &__info-container {
+            height: 25em;
+        }
+    
+        &__title {
+            font-size: 2.5em;
+        }
+    
+        &__description {
+            font-size: 1em;
+        }    
+    }  
+
+    .section-nosotros4 {
+    
+        &__image-container {
+            width: 25em;
+            height: 25em;
+        }
+    
+        &__info-container {
+            height: 25em;
+        }
+    
+        &__title {
+            font-size: 2.5em;
+        }
+    
+        &__description {
+            font-size: 1em;
+        }    
+    }    
+}
+
+@media (max-width: 768px) {
+
+    .section-nosotros3 {
+        height: 30em;
+
+        &__image-container {
+            width: 20em;
+            height: 20em;
+        }
+    
+        &__info-container {
+            height: 20em;
+        }
+    
+        &__title {
+            font-size: 2em;
+        }
+    
+        &__description {
+            font-size: 0.8em;
+        }    
+    }  
+
+    .section-nosotros4 {
+        height: 30em;
+
+        &__image-container {
+            width: 20em;
+            height: 20em;
+        }
+    
+        &__info-container {
+            height: 20em;
+        }
+    
+        &__title {
+            font-size: 2em;
+        }
+    
+        &__description {
+            font-size: 0.8em;
+        }      
+    }    
+
+    
+}
+
+@media (max-width: 660px) {
+
+    .section-nosotros {
+        height: 35em;
+
+        &__logo-container {
+            height: 35em;
+        }
+
+        &__motto {
+            font-size: 1em;
+        }
+    }
+
+    .section-nosotros1 {
+        height: 30em;
+
+        &__title {
+            margin-top: 1em;    
+            font-size: 2em;
+        }
+    
+        &__description {
+            margin-top: 0.5em;
+            font-size: 2em;
+        }
+    }
+
+    .section-nosotros2 {
+        height: 30em;
+
+        &__title {
+            margin-top: 1em;    
+            font-size: 2em;
+        }
+    
+        &__description {
+            margin-top: 0.5em;
+            font-size: 2em;
+        }
+    }
+
+    .section-nosotros3 {
+
+        &__image-container {
+            width: 15em;
+            height: 15em;
+        }
+    
+        &__info-container {
+            height: 15em;
+        }
+    
+        &__title {
+            font-size: 1.5em;
+        }
+    
+        &__description {
+            font-size: 0.6em;
+        }    
+    }  
+
+    .section-nosotros4 {
+
+        &__image-container {
+            width: 15em;
+            height: 15em;
+        }
+    
+        &__info-container {
+            height: 15em;
+        }
+    
+        &__title {
+            font-size: 1.5em;
+        }
+    
+        &__description {
+            font-size: 0.6em;
+        }    
+    }
+}
+
+@media (max-width: 460px) {
+    .section-nosotros {
+        height: 30em;
+
+        &__logo-container {
+            height: 30em;
+        }
+
+        &__logo {
+            height: 10em;
+        }
+
+        &__motto {
+            font-size: 0.7em;
+        }
+    }
+
+    .section-nosotros1 {
+        height: 25em;
+
+        &__title {
+            margin-top: 0.5em;    
+            font-size: 1em;
+        }
+    
+        &__description {
+            margin-top: 0.3em;
+            font-size: 1.5em;
+        }
+    }
+
+    .section-nosotros2 {
+        height: 25em;
+
+        &__title {
+            margin-top: 0.5em;    
+            font-size: 1em;
+        }
+    
+        &__description {
+            margin-top: 0.3em;
+            font-size: 1.5em;
+        }
+    }
+    
+    .section-nosotros3 {
+        flex-wrap: wrap;
+        
+        &__image-container {
+            width: 15em;
+            height: 15em;
+            margin-top: 1em;
+        }
+    
+        &__info-container {
+            height: 20em;
+            width: 35em;
+            margin-top: 0.5em;
+        }
+    
+        &__title {
+            font-size: 1.5em;
+        }
+    
+        &__description {
+            font-size: 0.6em;
+        }    
+    }  
+
+    .section-nosotros4 {
+        flex-wrap: wrap;
+        &__image-container {
+            width: 15em;
+            height: 15em;
+            margin-top: 1em;
+        }
+    
+        &__info-container {
+            height: 20em;
+            width: 35em;
+            margin-top: 0.5em;
+        }
+    
+        &__title {
+            font-size: 1.5em;
+        }
+    
+        &__description {
+            font-size: 0.6em;
+        }   
+    } 
+}
+
+@media (max-width: 320px) {
+
+    
+}
