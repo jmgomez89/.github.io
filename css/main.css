@@ -459,6 +459,9 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
+.main-footer__social-media-link:hover {
+  box-shadow: 0 0 5px #00b2ff, 0 0 10px #00b2ff, 0 0 20px #00b2ff, 0 0 40px #26687f, 0 0 80px #26687f, 0 0 90px #26687f, 0 0 100px #26687f, 0 0 110px #26687f, 0 0 130px #26687f;
+}
 
 .main-footer-card {
   width: 18em;
@@ -489,6 +492,7 @@ body {
           backface-visibility: hidden;
   transform-style: preserve-3d;
   border-radius: 6px;
+  cursor: pointer;
 }
 .main-footer-card__image {
   background-size: cover;
