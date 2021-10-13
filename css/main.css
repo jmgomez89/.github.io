@@ -236,54 +236,62 @@ body {
 
 #menu {
   display: none;
-  width: 3em;
-  height: 3em;
-  border: none;
-  border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  cursor: pointer;
 }
 
-#menu:focus + .nav-bar {
+#menu:checked + .nav-bar {
   display: block;
 }
 
-#menu:hover {
-  background-color: whitesmoke;
+#menu:checked ~ .menu-toggle__label {
+  background-color: transparent;
 }
 
-#menu:active {
+.menu-toggle {
+  display: none;
+  flex: 0 0 3em;
   position: relative;
-  top: 1px;
+  cursor: pointer;
+}
+
+.menu-toggle__label {
+  display: block;
+  width: 3em;
+  height: 2.5em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 #menu2 {
   display: none;
-  width: 3em;
-  height: 3em;
-  border: none;
-  border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  cursor: pointer;
 }
 
-#menu2:focus + .search-bar__form-container {
+#menu2:checked + .search-bar__form-container {
   display: block;
 }
 
-#menu2:hover {
-  background-color: whitesmoke;
+#menu2:checked ~ .menu-toggle2 {
+  background-color: transparent;
 }
 
-#menu2:active {
+.menu-toggle2 {
+  display: none;
+  flex: 0 0 3em;
   position: relative;
-  top: 1px;
+  cursor: pointer;
+}
+
+.menu-toggle__label2 {
+  display: block;
+  width: 3em;
+  height: 2.5em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .nav-bar__ul {
@@ -311,20 +319,25 @@ body {
 }
 
 @media (max-width: 990px) {
-  #menu2 {
-    display: block;
-    margin-right: 1em;
+  .search-bar {
+    gap: 0em;
   }
-
-  .search-bar__form-container {
-    display: none;
+  .search-bar__form-search {
+    width: 12em;
   }
-
-  .header__logo-container {
-    order: 1;
+}
+@media (max-width: 934px) {
+  .search-bar__form-search {
+    width: 8em;
   }
-
+}
+@media (max-width: 885px) {
   #menu {
+    width: 2em;
+    height: 2em;
+  }
+
+  .menu-toggle {
     display: block;
     order: 1;
   }
@@ -336,25 +349,40 @@ body {
   .nav-bar__ul {
     flex-direction: column;
   }
-}
-@media (max-width: 425px) {
-  #menu2 {
-    margin-right: 0em;
-    width: 2em;
-    height: 2em;
-  }
-
-  #menu {
-    width: 2em;
-    height: 2em;
-  }
 
   .search-bar {
-    gap: 0.5em;
+    gap: 3em;
   }
-  .search-bar__carrito-container {
-    width: 1.5em;
-    height: 1.5em;
+  .search-bar__form-search {
+    width: 15em;
+  }
+}
+@media (max-width: 768px) {
+  .search-bar {
+    gap: 1em;
+  }
+  .search-bar__form-search {
+    width: 10em;
+  }
+}
+@media (max-width: 589px) {
+  .search-bar {
+    gap: 0em;
+  }
+  .search-bar__form-search {
+    width: 8em;
+  }
+  .search-bar__form-container {
+    display: none;
+  }
+
+  #menu2 {
+    width: 2em;
+    height: 2em;
+  }
+
+  .menu-toggle2 {
+    display: block;
   }
 }
 .section-cards {
@@ -577,7 +605,7 @@ body {
     height: 7em;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 332px) {
   .main-footer {
     height: 40em;
   }
@@ -603,7 +631,7 @@ body {
 }
 
 .form-alta {
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 .form-alta__fieldset {
@@ -735,7 +763,7 @@ body {
 }
 
 .form-contacto {
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 .form-contacto__fieldset {
@@ -1106,7 +1134,7 @@ body {
     font-size: 1.5em;
   }
   .section-nosotros3__description {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 
   .section-nosotros4__image-container {
@@ -1120,7 +1148,7 @@ body {
     font-size: 1.5em;
   }
   .section-nosotros4__description {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 }
 @media (max-width: 460px) {
@@ -1173,6 +1201,7 @@ body {
     height: 20em;
     width: 35em;
     margin-top: 0.5em;
+    padding: 0.5em;
   }
   .section-nosotros3__title {
     font-size: 1.5em;
@@ -1193,6 +1222,7 @@ body {
     height: 20em;
     width: 35em;
     margin-top: 0.5em;
+    padding: 0.5em;
   }
   .section-nosotros4__title {
     font-size: 1.5em;
