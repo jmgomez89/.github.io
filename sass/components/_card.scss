@@ -131,6 +131,17 @@
             }
         }
 
+        &-add-to-carrito {
+            align-self: center;
+            width: 3em;
+            height: 2.5em;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
         &-button {
             align-self: center;
             cursor: pointer;

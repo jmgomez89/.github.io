@@ -145,6 +145,16 @@ body {
   height: 0.5rem;
   width: 0.5rem;
 }
+.card__back-add-to-carrito {
+  align-self: center;
+  width: 3em;
+  height: 2.5em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}
 .card__back-button {
   align-self: center;
   cursor: pointer;
@@ -1234,4 +1244,19 @@ body {
   .section-nosotros4__description {
     font-size: 0.6em;
   }
+}
+.section-cart {
+  padding: 1em;
+  position: fixed;
+  background-color: #f1f2f3;
+  top: 150px;
+  bottom: 150px;
+  left: 50px;
+  right: 50px;
+  z-index: 1;
+  box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.section-cart--open {
+  display: block;
 }
