@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="/img/logo/favicon-32x32.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/alta.js"></script>
     <title>Alta</title>
 </head>
 
@@ -80,6 +82,7 @@
                             Nombre de Producto:
                         </label>
                         <input class="form-alta__input" type="text" id="nombre" name="nombre" required autofocus>
+                        <div class="cartel"></div>
                     </div>
 
                     <div class="form-alta__datos-container">
@@ -87,6 +90,7 @@
                             Precio:
                         </label>
                         <input class="form-alta__input" type="number" id="precio" name="precio" min="0.00" max="1000000.00" step="0.01" required>
+                        <div class="cartel"></div>
                     </div>
 
                     <div class="form-alta__datos-container">
@@ -94,6 +98,7 @@
                             Stock:
                         </label>
                         <input class="form-alta__input" type="number" id="stock" name="documento"  min="1" max="1000000" required>
+                        <div class="cartel"></div>
                     </div>
 
                     <div class="form-alta__datos-container">
@@ -101,6 +106,7 @@
                             Marca:
                         </label>
                         <input class="form-alta__input" type="text" id="marca" name="marca" required>
+                        <div class="cartel"></div>
                     </div>
 
                     <div class="form-alta__datos-container">
@@ -136,14 +142,13 @@
                                 Otra
                             </option>
                         </select>
-
+                        <div class="cartel"></div>
                         
                         <div class="form-alta__datos-container">
                             <label>
                                 Detalles del Producto
                             </label>
-                            <textarea name="contanos" id="contanos" required >
-                            </textarea>
+                            <textarea name="contanos" id="contanos" required></textarea>
                         </div>
                         
                         <div class="form-alta__datos-foto">
@@ -151,6 +156,7 @@
                                 Foto del Producto
                             </button>
                             <input class="form-alta__input-foto" type="file" id="foto" name="foto" accept="image/*" required>
+                            <div class="cartel"></div>
                         </div>
 
                         <div class="form-alta__checkbox">
