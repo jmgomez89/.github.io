@@ -118,11 +118,8 @@ renderProds()
 
 /* Listado de productos */
 var listadoProductos = document.getElementsByClassName('container-products')[0]
-var mainImg = document.getElementsByClassName('main-img')[0]
 
 var btnListado = document.getElementById('btnListado')
 btnListado.addEventListener('click', function () {
     listadoProductos.classList.toggle('container-products--open')
-    mainImg.classList.toggle('main-img--closed')
-
 })
