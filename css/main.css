@@ -204,7 +204,7 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 
@@ -410,9 +410,11 @@ body {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 0.6em;
   justify-content: center;
-  margin-top: 1.5em;
+  max-width: 1440px;
+  width: 100%;
+  margin: 1.5em auto;
 }
 
 .main-footer {
@@ -465,7 +467,7 @@ body {
   align-items: center;
   gap: 2em;
 }
-.main-footer__social-media-link {
+.main-footer__social-media-link-location, .main-footer__social-media-link-mail, .main-footer__social-media-link-whatsapp, .main-footer__social-media-link-facebook, .main-footer__social-media-link-instagram, .main-footer__social-media-link-twitter, .main-footer__social-media-link-linkedin {
   display: inline-block;
   width: 2em;
   height: 2em;
@@ -474,9 +476,6 @@ body {
   background-repeat: no-repeat;
   background-color: transparent;
   cursor: pointer;
-}
-.main-footer__social-media-link:hover {
-  box-shadow: 0 0 5px #00b2ff, 0 0 10px #00b2ff, 0 0 20px #00b2ff, 0 0 40px #26687f, 0 0 80px #26687f, 0 0 90px #26687f, 0 0 100px #26687f, 0 0 110px #26687f, 0 0 130px #26687f;
 }
 
 .main-footer-card {
@@ -645,136 +644,298 @@ body {
   }
 }
 .main-alta {
-  margin-top: 6em;
-  margin-bottom: 5em;
+  margin-top: 15em;
+  margin-bottom: 45em;
   font-size: 1.5em;
 }
 
-.form-alta {
-  width: 60%;
-  margin: auto;
+.main-img {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 700px;
 }
-.form-alta__fieldset {
-  background-color: transparent;
-  border: none;
-  font-variant: small-caps;
+.main-img--closed {
+  display: none;
 }
-.form-alta__legend {
-  background-color: #DEEDF0;
-  border: 2px solid #0096C7;
-  border-radius: 3px;
-  padding: 0.5em;
-  margin-bottom: 1em;
+
+#btnListado {
+  position: absolute;
+  z-index: 1;
+  top: 18%;
+  right: 5%;
+  width: 700px;
+  background-color: #132333;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
-.form-alta__datos {
-  border: 2px #0096C7 solid;
-  background-color: #DEEDF0;
-  border-radius: 3px;
-  padding: 0.5em;
+
+.container-alta {
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  width: 500px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #132333;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
-.form-alta__datos:focus-within {
-  background-color: #A2CDCD;
-}
-.form-alta__fieldset:focus-within legend {
-  background-color: #A2CDCD;
-}
-.form-alta__datos-container {
-  padding: 0.5em;
+
+.container-alta h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
   text-align: center;
-  font-variant: small-caps;
 }
-.form-alta__datos-container label {
+
+.container-alta .user-box {
+  position: relative;
+}
+
+.user-box-envio input {
+  display: inline;
+  width: 15px;
+  height: 15px;
+}
+
+.user-box-envio {
+  color: #fff;
+  font-size: 20px;
+}
+
+.container-alta .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.container-alta .user-box label {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #03e9f4;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.container-alta form button {
+  left: 30%;
+  background-color: transparent;
+  position: relative;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.container-alta button:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.container-alta button span {
+  position: absolute;
   display: block;
 }
-.form-alta__datos-foto {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-.form-alta__foto {
-  background-color: #DEEDF0;
-  border: 1px #0096C7 solid;
-  color: #000;
-  padding: 0.5em 1em;
-  border-radius: 10px;
-  font-size: 0.9em;
-  font-weight: bold;
-  font-family: "Gemunu Libre", sans-serif;
-}
-.form-alta__input-foto {
-  left: 0;
+
+.container-alta button span:nth-child(1) {
   top: 0;
-  opacity: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  -webkit-animation: btn-anim1 1s linear infinite;
+          animation: btn-anim1 1s linear infinite;
+}
+
+@-webkit-keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.container-alta button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  -webkit-animation: btn-anim2 1s linear infinite;
+          animation: btn-anim2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+@-webkit-keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.container-alta button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  -webkit-animation: btn-anim3 1s linear infinite;
+          animation: btn-anim3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+.container-alta button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  -webkit-animation: btn-anim4 1s linear infinite;
+          animation: btn-anim4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+@-webkit-keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+.cartel {
+  border: 1px solid red;
+  background-color: yellow;
+  color: darkred;
+  text-align: center;
+  margin: 2px 0 20px 0;
+  border-radius: 5px;
+  display: none;
+  font-size: 16px;
+}
+
+/* ----------------------------------------------------------- */
+/* ----------------Listado de Productos----------------------- */
+/* ----------------------------------------------------------- */
+.container-products {
   position: absolute;
-  font-size: 3em;
+  top: 30%;
+  right: 5%;
+  width: 700px;
+  padding: 40px;
+  background: #132333;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: none;
+  z-index: 1;
 }
-.form-alta__datos-container textarea {
-  margin-top: 0.6em;
-  border: 1px #0096C7 solid;
-  border-radius: 3px;
-  width: 81%;
-  min-height: 10em;
-  resize: vertical;
-  color: #316B83;
-  font-size: 0.8em;
-  font-weight: 900;
-}
-.form-alta__input {
-  text-align: center;
-  color: #316B83;
-  border-radius: 3px;
-  width: 78%;
-  height: 2.5em;
-  border: 1px #0096C7 solid;
-  margin-top: 0.5em;
-  font-size: 0.6em;
-  font-weight: 900;
-}
-.form-alta__checkbox label {
-  display: inline;
-}
-.form-alta__buttons {
-  margin-top: 1em;
-  text-align: center;
-}
-.form-alta__button1 {
-  background-color: #A2CDCD;
-  color: black;
-  border: 1px #0096C7 solid;
-  border-radius: 3px;
-  height: 2.5em;
-  padding: 0.5em;
-  font-size: 0.8em;
-  font-family: "Gemunu Libre", sans-serif;
-}
-.form-alta__button2 {
-  background-color: #A2CDCD;
-  color: black;
-  border: 1px #0096C7 solid;
-  border-radius: 3px;
-  height: 2.5em;
-  padding: 0.5em;
-  font-size: 0.8em;
-  font-family: "Gemunu Libre", sans-serif;
-}
-.form-alta__button1:hover {
-  background-color: #DEEDF0;
-}
-.form-alta__button2:hover {
-  background-color: #DEEDF0;
+.container-products--open {
+  display: block;
 }
 
-@media (max-width: 425px) {
-  .main-alta {
-    margin-top: 10em;
-  }
-
-  .form-alta {
-    width: 90%;
-  }
+.container-products h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
 }
+
+#product-list {
+  background-color: #fff;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+td img {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
 .main-contacto {
   margin-top: 6em;
   margin-bottom: 5em;

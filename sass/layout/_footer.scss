@@ -59,7 +59,13 @@
         
     }
     
-    &__social-media-link {
+    &__social-media-link-location,
+    &__social-media-link-mail,
+    &__social-media-link-whatsapp,
+    &__social-media-link-facebook,
+    &__social-media-link-instagram,
+    &__social-media-link-twitter,
+    &__social-media-link-linkedin {
         display: inline-block;
         width: 2em;
         height: 2em;
@@ -68,19 +74,6 @@
         background-repeat: no-repeat;
         background-color: transparent;
         cursor: pointer;
-    }
-    
-    &__social-media-link:hover {
-        box-shadow: 
-            0 0 5px rgba(0,178,255,1),
-            0 0 10px rgba(0,178,255,1),
-            0 0 20px rgba(0,178,255,1),
-            0 0 40px rgba(38,104,127,1),
-            0 0 80px rgba(38,104,127,1),
-            0 0 90px rgba(38,104,127,1),
-            0 0 100px rgba(38,104,127,1),
-            0 0 110px rgba(38,104,127,1),
-            0 0 130px rgba(38,104,127,1);
     }
 
 }

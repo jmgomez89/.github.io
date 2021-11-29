@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="/img/logo/favicon-32x32.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/js/alta.js"></script>
     <title>Alta</title>
 </head>
 
@@ -67,116 +65,87 @@
     </header>
 
     <main class="main-alta">
-        <form action="formulario" method="post" autocomplete="off" class="form-alta">
 
-            <fieldset class="form-alta__fieldset">
+        <div class="container-products">
+            <h2>Listado de Productos</h2>
+            <div id="product-list"></div>
+        </div>
 
-                <legend class="form-alta__legend">
-                    Formulario de Alta 📋✔
-                </legend>
+        <button id="btnListado">Ver listado de productos</button>
 
-                <div class="form-alta__datos">
+        <img class="main-img" src="/img/alta/alta.png" alt="imagen de alta">
 
-                    <div class="form-alta__datos-container">
-                        <label for="nombre">
-                            Nombre de Producto:
-                        </label>
-                        <input class="form-alta__input" type="text" id="nombre" name="nombre" required autofocus>
-                        <div class="cartel"></div>
-                    </div>
+        <div class="container-alta">
+            <h2>Alta de Producto</h2>
 
-                    <div class="form-alta__datos-container">
-                        <label for="precio">
-                            Precio:
-                        </label>
-                        <input class="form-alta__input" type="number" id="precio" name="precio" min="0.00" max="1000000.00" step="0.01" required>
-                        <div class="cartel"></div>
-                    </div>
+            <form id="form-alta" autocomplete="off">
 
-                    <div class="form-alta__datos-container">
-                        <label for="stock">
-                            Stock:
-                        </label>
-                        <input class="form-alta__input" type="number" id="stock" name="documento"  min="1" max="1000000" required>
-                        <div class="cartel"></div>
-                    </div>
+              <div class="user-box">
+                <input type="text" class="inputs" id="nombre" name="">
+                <label for="nombre">Nombre</label>
+                <div class="cartel"></div>
+              </div>
 
-                    <div class="form-alta__datos-container">
-                        <label for="marca">
-                            Marca:
-                        </label>
-                        <input class="form-alta__input" type="text" id="marca" name="marca" required>
-                        <div class="cartel"></div>
-                    </div>
+              <div class="user-box">
+                <input type="text" class="inputs" id="precio" name="">
+                <label for="precio">Precio</label>
+                <div class="cartel"></div>
+              </div>
 
-                    <div class="form-alta__datos-container">
-                        <label for="categoria">
-                            Categoría:
-                        </label>
-                        <select class="form-alta__input" name="categoria" id="categoria" required>
-                            <option value="">
-                                - Seleccionar - 
-                            </option>
-                            <option value="celulares">
-                                Celulares y Teléfonos
-                            </option>
-                            <option value="computacion">
-                                Computación
-                            </option>
-                            <option value="electrodomesticos">
-                                Electrodomésticos
-                            </option>
-                            <option value="televisores">
-                                Televisores
-                            </option>
-                            <option value="camaras">
-                                Cámaras y Accesorios
-                            </option>
-                            <option value="consolas">
-                                Consolas y Videojuegos
-                            </option>
-                            <option value="electronica">
-                                Electrónica
-                            </option>
-                            <option value="otra">
-                                Otra
-                            </option>
-                        </select>
-                        <div class="cartel"></div>
-                        
-                        <div class="form-alta__datos-container">
-                            <label>
-                                Detalles del Producto
-                            </label>
-                            <textarea name="contanos" id="contanos" required></textarea>
-                        </div>
-                        
-                        <div class="form-alta__datos-foto">
-                            <button class="form-alta__foto">
-                                Foto del Producto
-                            </button>
-                            <input class="form-alta__input-foto" type="file" id="foto" name="foto" accept="image/*" required>
-                            <div class="cartel"></div>
-                        </div>
+              <div class="user-box">
+                <input type="text" class="inputs" id="stock" name="">
+                <label for="stock">Stock</label>
+                <div class="cartel"></div>
+              </div>
 
-                        <div class="form-alta__checkbox">
-                            <input type="checkbox" id="envio" name="envio" required>
-                            <label>
-                                Envío sin cargo
-                            </label>
-                        </div>
-                    </div>
+              <div class="user-box">
+                <input type="text" class="inputs" id="marca" name="">
+                <label for="marca">Marca</label>
+                <div class="cartel"></div>
+              </div>
 
-                </div>
+              <div class="user-box">
+                <input type="text" class="inputs" id="categoria" name="">
+                <label for="categoria">Categoría</label>
+                <div class="cartel"></div>
+              </div>
 
-                <div class="form-alta__buttons">
-                    <input class="form-alta__button1" type="submit" value="Cargar Producto">
-                    <input class="form-alta__button2" type="reset" value="Restablecer">
-                </div>
+              <div class="user-box">
+                <input type="text" class="inputs" id="detalles" name="">
+                <label for="detalles">Detalles</label>
+                <div class="cartel"></div>
+              </div>
 
-            </fieldset>
+              <div class="user-box">
+                <input type="text" class="inputs" id="foto" name="">
+                <label for="foto">Foto</label> 
+                <div class="cartel"></div>
+              </div>
 
-        </form>
+              <!-- Input para cargar la foto -->
+              <!-- <div class="user-box">
+                <input type="file" class="inputs" id="foto">
+                <label for="foto">Foto</label>
+                <div></div>
+              </div> -->
+
+              <div class="user-box-envio">
+                <label for="envio">Envío</label>
+                <input type="checkbox" class="inputs" id="envio" name="" >
+                <div class="cartel"></div>
+              </div>
+
+              <button class="btn-agregar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Agregar
+              </button>
+
+            </form>
+        </div>
+
 
     </main>
 
@@ -265,32 +234,34 @@
 
             <div class="main-footer__social-media">
                 
-                <a href="https://www.google.com.ar/maps/place/Av.+La+Plata+1772,+C1250AAU+CABA/@-34.6358237,-58.4251352,19z/data=!3m1!4b1!4m5!3m4!1s0x95bccbae96634181:0x6cfc4c1e4e261012!8m2!3d-34.6358248!4d-58.424588" target="_blank" class="main-footer__social-media-link" style="background-image: url(/img/iconos-footer/location.png);">
+                <a href="https://www.google.com.ar/maps/place/Av.+La+Plata+1772,+C1250AAU+CABA/@-34.6358237,-58.4251352,19z/data=!3m1!4b1!4m5!3m4!1s0x95bccbae96634181:0x6cfc4c1e4e261012!8m2!3d-34.6358248!4d-58.424588" target="_blank" class="main-footer__social-media-link-location" style="background-image: url(/img/iconos-footer/location.png);">
                 </a>
 
-                <a href="mailto:jmgomezn8@gmail.com" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/mail.png);">
+                <a href="mailto:jmgomezn8@gmail.com" class="main-footer__social-media-link-mail" target="_blank" style="background-image: url(/img/iconos-footer/mail.png);">
                 </a>
 
-                <a href="https://wa.me/5491125681234" target="_blank" class="main-footer__social-media-link" style="background-image: url(/img/iconos-footer/whatsapp.png);">
+                <a href="https://wa.me/5491125681233" target="_blank" class="main-footer__social-media-link-whatsapp" style="background-image: url(/img/iconos-footer/whatsapp.png);">
                 </a>
 
-                <a href="https://www.facebook.com/juanmanuel.gomez.52056" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/facebook.png);">
+                <a href="https://www.facebook.com" class="main-footer__social-media-link-facebook" target="_blank" style="background-image: url(/img/iconos-footer/facebook.png);">
                 </a>
 
-                <a href="https://www.instagram.com/juannmg22/" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/instagram.png);">
+                <a href="https://www.instagram.com" class="main-footer__social-media-link-instagram" target="_blank" style="background-image: url(/img/iconos-footer/instagram.png);">
                 </a>
 
-                <a href="https://twitter.com/juannnmg22" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/twitter.png);">
+                <a href="https://twitter.com" class="main-footer__social-media-link-twitter" target="_blank" style="background-image: url(/img/iconos-footer/twitter.png);">
                 </a>
 
-                <a href="https://www.linkedin.com/in/juan-manuel-g%C3%B3mez-a682b8137/" class="main-footer__social-media-link" target="_blank" style="background-image: url(/img/iconos-footer/linkedin.png);">
+                <a href="https://www.linkedin.com/in/juan-manuel-g%C3%B3mez-a682b8137/" class="main-footer__social-media-link-linkedin" target="_blank" style="background-image: url(/img/iconos-footer/linkedin.png);">
                 </a>
 
             </div>
             
         </section>
-
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/alta.js"></script>
 
 </body>
 </html>
