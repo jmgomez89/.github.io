@@ -51,7 +51,7 @@ function validar(valor, validador, index ) {
 }
 
 var regExpValidar = [
-    /^.+$/,       // regexp nombre
+    /([A-Za-z0-9]){1,20}\w+/,    // regexp nombre
     /^[0-9-]+$/,  // regexp precio
     /^[0-9-]+$/,  // regexp stock
     /^.+$/,       // regexp marca
@@ -102,9 +102,7 @@ function renderProds() {
         if(xhr.status == 200) {
             let plantillaHbs = xhr.response
 
-            // compile the template
             var template = Handlebars.compile(plantillaHbs);
-            // execute the compiled template and print the output to the console
             let html = template({ productos: productos })
 
             elemSectionProd.innerHTML = html

@@ -1,14 +1,3 @@
-.main-alta {
-    font-size: 1.5em;
-}   
-
-.main-img {
-    position: absolute;
-    top: 15%;
-    left: 45%;
-    width: 50%;
-    height: 100%;
-}
 
 #btnListado {
     font-size: 16px; 
@@ -33,20 +22,27 @@
 	transform: translateY(-7px);
 }
 
-.container-alta {
-    margin: 45% 10% 0 22%;
-    width: 40%;
+.alta-container {
+    padding: 5%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: right;
+    
+}
+
+#form-alta {
+    margin: 5% 0;
+    width: 45%;
     padding: 40px;
-    transform: translate(-50%, -50%);
     background: #132333;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
 }
   
-.container-alta h2 {
+#form-alta h2 {
     margin: 0 0 30px;
-    padding: 0;
     color: #fff;
     text-align: center;
 }
@@ -62,7 +58,7 @@
     font-size: 20px;
 }
 
-.container-alta .user-box input {
+#form-alta .user-box input {
     width: 100%;
     padding: 10px 0;
     font-size: 20px;
@@ -74,13 +70,13 @@
     background: transparent;
 }
 
-.container-alta .user-box label {
+#form-alta .user-box label {
     padding: 10px 0;
     font-size: 20px;
     color: #03e9f4;
 }
   
-.container-alta form button {
+#form-alta button {
     left: 30%;
     background-color: transparent;
     position: relative;
@@ -96,7 +92,7 @@
     
 }
   
-.container-alta button:hover {
+#form-alta button:hover {
     background: #03e9f4;
     color: #fff;
     border-radius: 5px;
@@ -106,12 +102,12 @@
                 0 0 100px #03e9f4;
 }
   
-.container-alta button span {
+#form-alta button span {
     position: absolute;
     display: block;
 }
   
-.container-alta button span:nth-child(1) {
+#form-alta button span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -129,7 +125,7 @@
     }
 }
   
-.container-alta button span:nth-child(2) {
+#form-alta button span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -148,7 +144,7 @@
     }
 }
   
-.container-alta button span:nth-child(3) {
+#form-alta button span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -167,7 +163,7 @@
     }
 }
   
-.container-alta button span:nth-child(4) {
+#form-alta button span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
@@ -246,67 +242,293 @@ td img {
     margin: 0 auto;
 }
 
-/* ------------------Responsive---------------------- */
-
-// @media only screen and (max-width: 600px) {
-//     .btn-flotante {
-//        font-size: 14px;
-//        padding: 12px 20px;
-//        bottom: 20px;
-//        right: 20px;
-//    }
-// }
-
 @media (min-width: 2560px) {
 
-    .container-alta {
-        margin: 21em 2em 0em 15em;
-        width: 20%;
+    .alta-container {
+        margin-left: 20%;
+        background-size: 60%;
+        background-position-y: center;
+        background-position-x: 100%;
+        max-width: 1700px;
+    }
+
+    #form-alta button {
+        left: 35%;
     }
 
     #btnListado {
-        font-size: 16px; 
-        bottom: 340px;
-        right: 480px;
+        bottom: 10%;
+        right: 15%;
     }
 
     .container-products {
-        top: 20%;
+        right: 15%;
+        width: 70%;
+    }
+}
+@media (max-width: 2560px) {
+
+    .alta-container {
+        margin-left: 20%;
+        background-size: 60%;
+        background-position-y: center;
+        background-position-x: 100%;
+        max-width: 1700px;
+    }
+
+    #btnListado {
+        bottom: 10%;
+        right: 15%;
+    }
+
+    .container-products {
         right: 15%;
         width: 70%;
     }
 
-    .main-img {
-        top: 15%;
-        left: 45%;
-        width: 30em;
-        height: 30em;
+    .alta-container {
+        margin-left: 20%;
+        background-size: 60%;
+        background-position-y: center;
+        background-position-x: 100%;
+        max-width: 1700px;
+    }
+
+    #btnListado {
+        bottom: 10%;
+        right: 15%;
+    }
+
+    .container-products {
+        right: 15%;
+        width: 70%;
     }
 }
 
-@media (max-width: 332px) {
-
-    .container-alta {
-        top: 80em;
-        margin: 55em 0em 25em 10em;
+@media (max-width: 2157px) {
+    
+    .alta-container {
+        margin-left: 10%;
+        max-width: 1600px;
+    }
+    
+    #btnListado {
+        bottom: 10%;
+        right: 10%;
+    }
+    
+    .container-products {
+        right: 10%;
         width: 80%;
-        font-size: 10px;
+    }
+    
+}
+
+@media (max-width: 1917px) {
+    
+    .alta-container {
+        margin-left: 7%;
+        max-width: 1500px;
+    }
+    
+    #btnListado {
+        bottom: 15%;
+        right: 15%;
+    }
+    
+    .container-products {
+        right: 10%;
+        width: 80%;
+    }
+    
+}
+
+@media (max-width: 1637px) {
+    
+    .alta-container {
+        max-width: 1400px;
+    }
+    
+    #btnListado {
+        bottom: 10%;
+        right: 10%;
+    }
+    
+    .container-products {
+        right: 8%;
+        width: 90%;
+    }
+    
+}
+
+@media (max-width: 1517px) {
+    
+    .alta-container {
+        max-width: 1300px;
     }
 
     #btnListado {
-        font-size: 8px; 
-        bottom: 140px;
-        right: 180px;
+        bottom: 15%;    
+        right: 10%;
     }
+    
+}
+
+@media (max-width: 1417px) {
+    
+    .alta-container {
+        max-width: 1200px;
+    }
+    
+}
+
+@media (max-width: 1227px) {
+    
+    .alta-container {
+        background-size: 55%;
+    }
+
+    #form-alta {
+        width: 50%;
+    }
+    
+}
+
+@media (max-width: 1100px) {
+
+    .alta-container {
+        background-size: 50%;
+    }
+    
+    #btnListado {
+        bottom: 10%;    
+        right: 5%;
+    }
+
+    #form-alta {
+        margin-top: 7em;
+        width: 55%;
+    }
+
+    #form-alta button {
+        left: 30%;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+
+    .alta-container {
+        background-size: 45%;
+    }
+    
+    #btnListado {
+        bottom: 12%;    
+        right: 2%;
+        font-size: 12px;
+    }
+
+    #form-alta {
+        width: 60%;
+    }
+
+    
+}
+
+@media (max-width: 855px) {
+    
+    #btnListado {
+        bottom: 5%;    
+        right: 30%;
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width: 730px) {
+
+    .alta-container {
+        background-size: 0;
+        margin-bottom: 5em;
+    }
+    
+    #btnListado {
+        bottom: 6%;    
+        right: 14%;
+        font-size: 12px;
+    }
+
+    #form-alta {
+        width: 90%;
+    }
+    
+}
+
+@media (max-width: 630px) {
 
     .container-products {
-        top: 20%;
-        right: 15%;
-        width: 70%;
+        right: 8%;
+        width: 90%;
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 560px) {
+
+    .container-products {
+        right: 7.5%;
+        width: 92%;
+        padding: 5px;
+    }
+    
+}
+
+@media (max-width: 520px) {
+
+    .container-products {
+        right: 7.5%;
+        width: 92%;
+        padding: 5px;
     }
 
-    .main-img {
-        display: none;
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 3px;
     }
+    
+    table {
+        width: 100%;
+    }
+    
+    td img {
+        width: 25px;
+        display: block;
+        margin: 0 auto;
+    }
+    
 }
+
+@media (max-width: 463px) {
+
+    .container-products {
+        padding: 2px;
+    }
+
+    table, th, td {
+        border: 0.5px solid black;
+        padding: 2px;
+    }
+    
+    table {
+        width: 95%;
+    }
+    
+    td img {
+        width: 20px;
+    }
+    
+}
+
 
