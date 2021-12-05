@@ -43,11 +43,7 @@ function start() {
         xhr.addEventListener('load', () => {
             if (xhr.status == 200) {
                 let plantilla = xhr.response
-
-                /* Cargo la plantilla HTML en la vista, por debajo de la navegación */
                 document.querySelector('main').innerHTML = plantilla
-
-                /* Cargo el script JS que va a manejar la funcionalidad de la plantilla inyectada */
                 initJS(id)
             }
         })
@@ -55,17 +51,10 @@ function start() {
 
     function cargarPlantillas() {
         let links = document.querySelectorAll('.nav-bar__link')
-    
-        /* ----------------------------------------------------------------- */
-        /*                     Carga de la vista inicial                     */
-        /* ----------------------------------------------------------------- */
         let id = location.hash.slice(1) || 'inicio'
         marcarLink(id)
         cargarPlantilla(id)
 
-        /* ----------------------------------------------------------------------- */
-        /*         Carga de la vistas dinámicas por parte de la navegación         */
-        /* ----------------------------------------------------------------------- */
         links.forEach(link => {
             link.addEventListener('click', e => {
                 e.preventDefault()
