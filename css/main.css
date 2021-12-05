@@ -318,7 +318,6 @@ body {
 }
 
 .nav-bar__link {
-  font-weight: 600;
   display: block;
   width: 4em;
   font-size: 1.5em;
@@ -402,6 +401,10 @@ body {
     display: block;
   }
 }
+.active {
+  font-size: 1.7em;
+}
+
 .section-cards {
   background-color: #f1f2f3;
   padding: 1em;
@@ -1636,19 +1639,4 @@ td img {
   .section-nosotros4__description {
     font-size: 0.6em;
   }
-}
-.section-cards {
-  background-color: #f1f2f3;
-  padding: 1em;
-  margin-top: 6em;
-}
-
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6em;
-  justify-content: center;
-  max-width: 1440px;
-  width: 100%;
-  margin: 1.5em auto;
 }
