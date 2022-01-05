@@ -1,20 +1,12 @@
-const productos = [
-    { nombre : 'Pizarrón', precio: 23, stock: 4, marca: 'b', categoria: 'c', detalles: 'd', foto: 'https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png', envio: true },
-    { nombre : 'Calculadora', precio: 33, stock: 5, marca: 'bb', categoria: 'cc', detalles: 'dd', foto: 'https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png', envio: false },
-    { nombre : 'Escuadra', precio: 43, stock: 6, marca: 'bbb', categoria: 'ccc', detalles: 'ddd', foto: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-128.png', envio: true },
-]
+/* Declaraciones de variables y funciones */
 
-
-function initAlta() {
-
-    const inputs = document.querySelectorAll('.inputs')
-    const form = document.getElementById('form-alta')
-    const button = document.querySelector('.btn-agregar')
-
-    const elemSectionProd = document.getElementById('product-list')
-
-    button.disabled = true
-    var camposValidos = [false, false, false, false, false, false, false ]
+    let inputs 
+    let form 
+    let button 
+    let camposValidos 
+    let listadoProductos
+    let btnListado
+    let elemSectionProd
 
     function algunCampoNoValido() {
         let valido = 
@@ -62,40 +54,6 @@ function initAlta() {
         /^.+$/,       // regexp foto
     ]
 
-    inputs.forEach( (input,index) => {
-        if(input.type != 'checkbox') {
-            input.addEventListener('input', () => {
-                validar(input.value, regExpValidar[index], index )
-            })
-        }
-    })
-
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-
-        let producto = {
-            nombre: inputs[0].value,
-            precio: inputs[1].value,
-            stock: inputs[2].value,
-            marca: inputs[3].value,
-            categoria: inputs[4].value,
-            detalles: inputs[5].value,
-            foto: inputs[6].value,
-            envio: inputs[7].checked,
-        }
-
-        productos.push(producto)
-        renderProds()
-
-        inputs.forEach(input => {
-            if(input.type == 'checkbox') input.checked = false
-            else input.value = ''
-        })
-        button.disabled = true
-        camposValidos = [false, false, false, false, false, false, false ]
-    })
-
-
     function renderProds() {
         
         const xhr = new XMLHttpRequest
@@ -105,7 +63,7 @@ function initAlta() {
                 let plantillaHbs = xhr.response
 
                 var template = Handlebars.compile(plantillaHbs);
-                let html = template({ productos: productos })
+                let html = template({ productos, validos : !algunCampoNoValido() })
 
                 elemSectionProd.innerHTML = html
             }
@@ -113,13 +71,66 @@ function initAlta() {
         xhr.send()
     }
 
+    function leerProductoIngresado(){
+        return {
+            nombre: inputs[0].value,
+            precio: inputs[1].value,
+            stock: inputs[2].value,
+            marca: inputs[3].value,
+            categoria: inputs[4].value,
+            detalles: inputs[5].value,
+            foto: inputs[6].value,
+            envio: inputs[7].checked,
+        }
+    }
+
+    function limpiarFormulario(){
+        inputs.forEach(input => {
+            if(input.type == 'checkbox') input.checked = false
+            else input.value = ''
+        })
+        button.disabled = true
+        camposValidos = [false, false, false, false, false, false, false ]
+    }
+
+
+/* Zona de inicializaciones y puesta en marcha */
+
+async function initAlta() {
+
+    inputs = document.querySelectorAll('.inputs')
+    form = document.getElementById('form-alta')
+    button = document.querySelector('.btn-agregar')
+
+    elemSectionProd = document.getElementById('product-list')
+
+    button.disabled = true
+    camposValidos = [false, false, false, false, false, false, false ]
+
+    inputs.forEach( (input,index) => {
+        if(input.type != 'checkbox') {
+            input.addEventListener('input', () => {
+                validar(input.value, regExpValidar[index], index )
+                renderProds()
+            })
+        }
+    })
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+
+        guardarProducto()        
+    })
+
+    await obtenerProductos()
     renderProds()
 
 
     /* Listado de productos */
-    var listadoProductos = document.getElementsByClassName('container-products')[0]
 
-    var btnListado = document.getElementById('btnListado')
+    listadoProductos = document.getElementsByClassName('container-products')[0]
+
+    btnListado = document.getElementById('btnListado')
     btnListado.addEventListener('click', function () {
         listadoProductos.classList.toggle('container-products--open')
     })
