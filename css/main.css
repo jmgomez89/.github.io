@@ -181,20 +181,63 @@ body {
   box-shadow: 0 0 5px #00b2ff, 0 0 10px #00b2ff, 0 0 20px #00b2ff, 0 0 40px #26687f, 0 0 80px #26687f, 0 0 90px #26687f, 0 0 100px #26687f, 0 0 140px #26687f, 0 0 180px #26687f;
 }
 
+.card__back-inner img {
+  align-self: center;
+  cursor: pointer;
+  display: block;
+  padding: 0 1.5em;
+  height: 3em;
+  min-width: 3em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 100%;
+}
+
 .section-cart {
-  padding: 1em;
+  padding: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: auto;
+  display: none;
   position: fixed;
   background-color: #f1f2f3;
-  top: 150px;
-  bottom: 150px;
-  left: 50px;
-  right: 50px;
   z-index: 1;
-  box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.3);
-  display: none;
+  top: 150px;
+  left: 150px;
+  right: 150px;
+  bottom: 150px;
+  box-shadow: 0.3em 0.3em 10em 0.3em black;
 }
-.section-cart--open {
+.section-cart--visible {
   display: block;
+}
+.section-cart table {
+  width: 95%;
+  margin: 10px auto;
+}
+.section-cart table, .section-cart th, .section-cart td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+.section-cart table button {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100px;
+  height: 35px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.section-cart button.btn__enviarCarrito {
+  float: right;
+  margin: 15px;
+  width: 100px;
+  height: 35px;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 .header {
@@ -652,12 +695,13 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: #ffffff;
+  text-shadow: 0 0 5px #00b2ff, 0 0 10px #00b2ff, 0 0 20px #00b2ff, 0 0 40px #26687f, 0 0 80px #26687f, 0 0 90px #26687f, 0 0 100px #26687f, 0 0 140px #26687f, 0 0 180px #26687f;
   border-radius: 5px;
   letter-spacing: 2px;
   background-color: #132333;
   padding: 18px 30px;
   position: static;
-  bottom: 5%;
+  margin-top: 5%;
   right: 5%;
   transition: all 300ms ease 0ms;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -679,7 +723,7 @@ body {
 }
 
 #form-alta {
-  margin: 5% 0;
+  margin: 3% 0;
   width: 45%;
   padding: 40px;
   background: #132333;
@@ -690,8 +734,12 @@ body {
 
 #form-alta h2 {
   margin: 0 0 30px;
-  color: #fff;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
   text-align: center;
+  color: #fff;
+  text-shadow: 0 0 5px #00b2ff, 0 0 10px #00b2ff, 0 0 20px #00b2ff, 0 0 40px #26687f, 0 0 80px #26687f, 0 0 90px #26687f, 0 0 100px #26687f, 0 0 140px #26687f, 0 0 180px #26687f;
 }
 
 .user-box-envio input {
@@ -703,6 +751,7 @@ body {
 .user-box-envio {
   color: #fff;
   font-size: 20px;
+  text-shadow: 0 0 5px #00b2ff, 0 0 10px #00b2ff, 0 0 20px #00b2ff, 0 0 40px #26687f, 0 0 80px #26687f, 0 0 90px #26687f, 0 0 100px #26687f, 0 0 140px #26687f, 0 0 180px #26687f;
 }
 
 #form-alta .user-box input {
@@ -720,7 +769,8 @@ body {
 #form-alta .user-box label {
   padding: 10px 0;
   font-size: 20px;
-  color: #03e9f4;
+  color: #fff;
+  text-shadow: 0 0 5px #00b2ff, 0 0 10px #00b2ff, 0 0 20px #00b2ff, 0 0 40px #26687f, 0 0 80px #26687f, 0 0 90px #26687f, 0 0 100px #26687f, 0 0 140px #26687f, 0 0 180px #26687f;
 }
 
 #form-alta button {
@@ -880,7 +930,7 @@ body {
 /* ----------------------------------------------------------- */
 .container-products {
   position: absolute;
-  top: 20%;
+  top: 30%;
   right: 5%;
   width: 90%;
   padding: 40px;

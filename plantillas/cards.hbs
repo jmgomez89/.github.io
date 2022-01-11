@@ -1,13 +1,14 @@
-{{#each cards}}
+{{#if listado.length }}
+{{#each listado}}
 <div class="card">
-    <input type="checkbox" id="card{{btn}}" class="card__input" aria-hidden="true">
+    <input type="checkbox" id="card{{id}}" class="card__input" aria-hidden="true">
     <div class="card__content">
-        <div class="card__image" style="background-image: url({{image}})">
+        <div class="card__image" style="background-image: url({{foto}})">
             <div class="card__front">
                 <h3 class="card__heading">
-                    {{heading}} 
+                    {{nombre}} 
                 </h3>
-                <label for="card{{btn}}" class="card__button" style="background-image: url(/img/iconos/ir.png);" aria-hidden="true">
+                <label for="card{{id}}" class="card__button" style="background-image: url(/img/iconos/ir.png);" aria-hidden="true">
                 </label>
             </div>
         </div>
@@ -15,16 +16,20 @@
             <div class="card__back-inner">
                 <div class="card__back-description">
                     <p>
-                        {{description}}
+                        {{detalles}}
                     </p>
                 </div>
                 <div class="card__back-price">
-                    ${{price}}
+                    ${{precio}}
                 </div>
-                <label for="card{{btn}}" class="card__back-button" style="background-image: url(/img/iconos/retorno.png);" aria-hidden="true">
+                <img src="/img/logo/logo_small_icon_only.png" alt="icono del carrito" onclick="agregarCarrito(event,{{id}},this)">
+                <label for="card{{id}}" class="card__back-button" style="background-image: url(/img/iconos/retorno.png);" aria-hidden="true">
                 </label>
             </div>
         </div>
     </div>
 </div>
 {{/each}}
+{{else}}
+    <h2>No se encontraron productos</h2>
+{{/if}}

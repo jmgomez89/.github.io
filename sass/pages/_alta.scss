@@ -4,12 +4,22 @@
 	text-transform: uppercase; 
 	font-weight: bold; 
 	color: #ffffff;
+    text-shadow:
+        0 0 5px rgba(0,178,255,1),
+        0 0 10px rgba(0,178,255,1),
+        0 0 20px rgba(0,178,255,1),
+        0 0 40px rgba(38,104,127,1),
+        0 0 80px rgba(38,104,127,1),
+        0 0 90px rgba(38,104,127,1),
+        0 0 100px rgba(38,104,127,1),
+        0 0 140px rgba(38,104,127,1),
+        0 0 180px rgba(38,104,127,1);
 	border-radius: 5px; 
 	letter-spacing: 2px; 
     background-color: #132333; 
 	padding: 18px 30px; 
 	position: static;
-	bottom: 5%;
+    margin-top: 5%;
 	right: 5%;
 	transition: all 300ms ease 0ms;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -32,7 +42,7 @@
 }
 
 #form-alta {
-    margin: 5% 0;
+    margin: 3% 0;
     width: 45%;
     padding: 40px;
     background: #132333;
@@ -43,8 +53,21 @@
   
 #form-alta h2 {
     margin: 0 0 30px;
-    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
     text-align: center;
+    color: #fff;
+    text-shadow:
+        0 0 5px rgba(0,178,255,1),
+        0 0 10px rgba(0,178,255,1),
+        0 0 20px rgba(0,178,255,1),
+        0 0 40px rgba(38,104,127,1),
+        0 0 80px rgba(38,104,127,1),
+        0 0 90px rgba(38,104,127,1),
+        0 0 100px rgba(38,104,127,1),
+        0 0 140px rgba(38,104,127,1),
+        0 0 180px rgba(38,104,127,1);
 }
 
 .user-box-envio input {
@@ -56,6 +79,16 @@
 .user-box-envio {
     color: #fff;
     font-size: 20px;
+    text-shadow:
+        0 0 5px rgba(0,178,255,1),
+        0 0 10px rgba(0,178,255,1),
+        0 0 20px rgba(0,178,255,1),
+        0 0 40px rgba(38,104,127,1),
+        0 0 80px rgba(38,104,127,1),
+        0 0 90px rgba(38,104,127,1),
+        0 0 100px rgba(38,104,127,1),
+        0 0 140px rgba(38,104,127,1),
+        0 0 180px rgba(38,104,127,1);
 }
 
 #form-alta .user-box input {
@@ -73,7 +106,17 @@
 #form-alta .user-box label {
     padding: 10px 0;
     font-size: 20px;
-    color: #03e9f4;
+    color: #fff;
+    text-shadow:
+        0 0 5px rgba(0,178,255,1),
+        0 0 10px rgba(0,178,255,1),
+        0 0 20px rgba(0,178,255,1),
+        0 0 40px rgba(38,104,127,1),
+        0 0 80px rgba(38,104,127,1),
+        0 0 90px rgba(38,104,127,1),
+        0 0 100px rgba(38,104,127,1),
+        0 0 140px rgba(38,104,127,1),
+        0 0 180px rgba(38,104,127,1);
 }
   
 #form-alta button {
@@ -200,7 +243,7 @@
 
 .container-products {
     position: absolute;
-    top: 20%;
+    top: 30%;
     right: 5%;
     width: 90%;
     padding: 40px;

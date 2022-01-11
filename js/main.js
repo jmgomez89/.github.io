@@ -1,79 +1,74 @@
-var elemSectionCart = document.getElementsByClassName('section-cart')[0]
-
-function start() {
-
-    function ajax(url, metodo) {
-        let xhr = new XMLHttpRequest
-        xhr.open(metodo || 'get', url)    
-        xhr.send()
-
-        return xhr
+class Main {
+    async ajax(url, metodo='get') {   
+        return await fetch(url, { method: metodo }).then(r => r.text())
     }
 
-    function getNombreArchivo(id) {
-        return '/vistas/' + id + '.html'
+    getNombreArchivo(id) {
+        return 'vistas/' + id + '.html'
     }
 
-    function marcarLink(id) {
-        let links = document.querySelectorAll('.nav-bar__link')
-        links.forEach(link => {
+    marcarLink(id) {
+        let links = document.querySelectorAll('header nav a')
+        links.forEach( link => {
             if(link.id == id) link.classList.add('active')
             else link.classList.remove('active')
         })
     }
 
-    function initJS(id) {
-        if(id == 'inicio') {
+    initJS(id) {
+        if(id == 'alta') {
+            initAlta()
+        }
+        else if(id == 'inicio') {
             initInicio()
         }
-        else if(id == 'alta') {
-            initAlta()
+        else if(id == 'nosotros') {
+            initNosotros()
         }
         else if(id == 'contacto') {
             initContacto()
         }
-        else if(id == 'nosotros') {
-            initNosotros()
-        }                
     }
 
-    function cargarPlantilla(id) {
-        let archivo = getNombreArchivo(id)
-        let xhr = ajax(archivo)
-        xhr.addEventListener('load', () => {
-            if (xhr.status == 200) {
-                let plantilla = xhr.response
-                document.querySelector('main').innerHTML = plantilla
-                initJS(id)
-            }
-        })
+    async cargarPlantilla(id) {
+        let archivo = this.getNombreArchivo(id)
+
+        let plantilla = await this.ajax(archivo)
+        let main = document.querySelector('main')
+        main.innerHTML = plantilla
+
+        this.initJS(id)
     }
 
-    function cargarPlantillas() {
-        let links = document.querySelectorAll('.nav-bar__link')
+    async cargarPlantillas() {
         let id = location.hash.slice(1) || 'inicio'
-        marcarLink(id)
-        cargarPlantilla(id)
+        this.marcarLink(id)
+        await this.cargarPlantilla(id)
+
+        let links = document.querySelectorAll('header nav a')
+
 
         links.forEach(link => {
             link.addEventListener('click', e => {
                 e.preventDefault()
+
                 let id = link.id
                 location.hash = id
-
             })
-
         })
 
-        window.addEventListener('hashchange', () => {
+        window.addEventListener('hashchange', async () => {
+
             let id = location.hash.slice(1) || 'inicio'
-            marcarLink(id)
-            cargarPlantilla(id)
+            this.marcarLink(id)
+            await this.cargarPlantilla(id)
         })
     }
 
-    cargarPlantillas()
+    async start() {
+        await this.cargarPlantillas()
+    }
 }
 
-start()
-
+const main = new Main()
+main.start()
