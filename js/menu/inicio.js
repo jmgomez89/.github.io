@@ -13,7 +13,7 @@ function agregarCarrito(e,id,ref) {
 }
 
 async function initInicio() {
-    
+    console.warn('initInicio()')
     var productos = await productoController.obtenerProductos()
     await renderPlantillaListado(productos)
 

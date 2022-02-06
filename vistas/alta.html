@@ -47,10 +47,16 @@
             <div class="cartel"></div>
         </div>
 
-        <div class="user-box">
-            <label for="foto">Foto</label> 
-            <input type="text" class="inputs" id="foto" name="">
-            <div class="cartel"></div>
+        <div id="drop-area">
+            <p>Arrastre y suelte una imagen dentro del área punteada!</p>
+            <br>
+
+            <input id="foto" type="file" accept="image/*" onchange="formularioAlta.handleFiles(this.files)">
+            <label class="button" for="foto">Haga click para subir una imagen de sus archivos</label>
+            <br><br>
+
+            <progress id="progress-bar" max="100" value="0"></progress>
+            <div id="gallery"><img src="" alt=""></div>
         </div>
 
         <div class="user-box-envio">

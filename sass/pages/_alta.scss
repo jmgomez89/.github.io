@@ -32,6 +32,53 @@
 	transform: translateY(-7px);
 }
 
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 400px;
+    margin: 25px 0;
+    padding: 20px;
+}
+
+#drop-area p {
+    color: #fff;
+    font-size: 20px;
+    text-shadow:
+        0 0 5px rgba(0,178,255,1),
+        0 0 10px rgba(0,178,255,1),
+        0 0 20px rgba(0,178,255,1),
+        0 0 40px rgba(38,104,127,1),
+        0 0 80px rgba(38,104,127,1),
+        0 0 90px rgba(38,104,127,1),
+        0 0 100px rgba(38,104,127,1),
+        0 0 140px rgba(38,104,127,1),
+        0 0 180px rgba(38,104,127,1);
+}
+
+#foto {
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#drop-area.highlight {
+    border-color: purple;
+}
+
+#gallery img {
+    width: 100px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 .alta-container {
     padding: 5%;
     background-size: 60%;
